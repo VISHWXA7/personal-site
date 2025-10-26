@@ -78,8 +78,8 @@ export default function ContactPage() {
             <ContactCard
               icon={<Mail size={24} />}
               title="Email"
-              subtitle="phillipche1@gmail.com"
-              href="mailto:phillipche1@gmail.com"
+              subtitle="vishwaangl@gmail.com"
+              href="mailto:vishwaangl@gmail.com"
             />
             <ContactCard
               icon={<Instagram size={24} />}
