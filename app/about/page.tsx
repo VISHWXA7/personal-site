@@ -1,13 +1,17 @@
 import React from 'react';
+import { ExternalLink, Award } from 'lucide-react';
 
 export default function Portfolio() {
-  const images = [
-    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop"
-  ];
 
+  interface Certification {
+  title: string;
+  issuer: string;
+  date: string;
+  certificateImage: string;
+  certificateUrl: string;
+  topics: string[];
+}
+ 
   const timeline = [
     {
       company: "Amazon",
@@ -101,33 +105,48 @@ export default function Portfolio() {
     }
   ];
 
+  const certifications: Certification[] = [
+    {
+      title: "AWS Solutions Architect Associate",
+      issuer: "Amazon Web Services",
+      date: "October 2024",
+      certificateImage: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop",
+      certificateUrl: "https://aws.amazon.com/certification/",
+      topics: [
+        "Designing resilient architectures",
+        "High-performing architectures",
+        "Secure applications and architectures",
+        "Cost-optimized architectures",
+        "EC2, S3, RDS, Lambda services",
+        "VPC and networking concepts"
+      ]
+    },
+    {
+      title: "Meta Front-End Developer Professional Certificate",
+      issuer: "Meta (Facebook)",
+      date: "June 2024",
+      certificateImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
+      certificateUrl: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
+      topics: [
+        "HTML, CSS, and JavaScript fundamentals",
+        "React and modern frameworks",
+        "Version control with Git",
+        "UI/UX design principles",
+        "Responsive web design",
+        "Advanced React patterns and hooks"
+      ]
+    }
+  ];
+
+
   return (
     <div className="min-h-screen bg-black text-white px-8 py-16">
       <div className="max-w-3xl mx-auto">
 
-        
-        {/* About Section */}
-        <section className="mb-24">
-          <h1 className="text-6xl font-bold mb-4 mt-10">About</h1>
-          <p className="text-2xl text-gray-400 mb-12">Who I am.</p>
-          
-          <div className="flex gap-4 overflow-x-auto pb-4">
-            {images.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={`Photo ${i + 1}`}
-                className="w-80 h-80 object-cover rounded-3xl flex-shrink-0 transform rotate-1 hover:rotate-0 transition-transform"
-                style={{ transform: `rotate(${(i % 2 === 0 ? 1 : -1) * 2}deg)` }}
-              />
-            ))}
-          </div>
-        </section>
-
+      
         {/* Timeline Section */}
-        <section className="mb-24">
+        <section className="mb-24 mt-10">
           <h2 className="text-4xl font-bold mb-12">Timeline</h2>
-          
           <div className="relative border-l-2 border-gray-800 pl-8 space-y-12">
             {timeline.map((item, i) => (
               <div key={i} className="relative">
@@ -173,9 +192,67 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/*Certification Section*/}
+        <section>
+          <h2 className="text-4xl font-bold mb-12">Certifications</h2>
+         
+          {/* Certifications List */}
+          <div className="space-y-12">
+            {certifications.map((cert, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
+              >
+                {/* Certificate Image - Left Side */}
+                <a
+                  href={cert.certificateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative block"
+                >
+                  <div className="relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-900/50 transition-all duration-300 group-hover:border-gray-700 group-hover:scale-[1.02]">
+                    <img
+                      src={cert.certificateImage}
+                      alt={`${cert.title} Certificate`}
+                      className="w-full h-auto object-cover"
+                    />
+                    {/* Overlay on hover */}
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="text-center">
+                        <ExternalLink className="mx-auto mb-2 text-white" size={32} />
+                        <p className="text-white font-semibold">View Certificate</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                {/* Course Details - Right Side */}
+                <div className="flex flex-col justify-center">
+                  <div className="mb-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                      {cert.title}
+                    </h3>
+                  </div>
+
+                  {/* View Certificate Link */}
+                  <a
+                    href={cert.certificateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-yellow-500 hover:text-yellow-400 font-semibold mt-6 group"
+                  >
+                    View Certificate
+                    <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Hobbies Section */}
         <section>
-          <h2 className="text-4xl font-bold mb-12">Hobbies</h2>
+          <h2 className="text-4xl font-bold mb-12 mt-24">Hobbies</h2>
           
           <div className="grid grid-cols-2 gap-8">
             {hobbies.map((hobby, i) => (
@@ -187,6 +264,8 @@ export default function Portfolio() {
             ))}
           </div>
         </section>
+
+        
       </div>
     </div>
   );
