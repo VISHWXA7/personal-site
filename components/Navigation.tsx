@@ -8,13 +8,13 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'About', href: '/about' },
-    { name: 'Gallery', href: '/gallery' },
+    { name: 'Gear', href: '/gear' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <nav className="top-0 w-full z-50 absolute">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="w-full z-50 absolute">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           
           {/* Logo */}

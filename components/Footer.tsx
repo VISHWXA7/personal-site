@@ -8,13 +8,12 @@ const Footer = () => {
     const socialLinks = [
     { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com/in/yourprofile', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
     { icon: Mail, href: 'mailto:your.email@example.com', label: 'Email' },
   ];
 
   return (
     <footer className="bg-black text-gray-400 py-8 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-2xl mx-auto">
 
         {/* Social Icons */}
         <div className="flex justify-center items-center gap-8 mb-6">
