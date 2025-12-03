@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vishwaa - Developer & Problem Solver",
-  description: "Portfolio of Vishwaa - A passionate developer creating digital experiences that matter. Specializing in modern web technologies, full-stack development, and innovative solutions.",
+  title: "VishwaaPortfolio",
+  description: "Simple Yet Modern Site.",
   keywords: ["developer", "portfolio", "web development", "full-stack", "React", "Next.js", "TypeScript"],
   authors: [{ name: "Vishwaa" }],
   creator: "Vishwaa",
