@@ -1,29 +1,18 @@
 'use client';
 
 import Link from 'next/link';
+import { navItems } from '@/app/data/index';
 
 
 const Navigation = () => {
   
 
-  const navItems = [
-    { name: 'About', href: '/about' },
-    { name: 'Gear', href: '/gear' },
-    { name: 'Contact', href: '/contact' },
-  ];
 
   return (
     <nav className="w-full z-50 absolute">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          
-          {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-white">
-            Vishwaa
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="md:flex space-x-8">
+        <div className="flex justify-center items-center h-16">
+          <div className="flex space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}

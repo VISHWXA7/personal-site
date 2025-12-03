@@ -85,3 +85,10 @@
       link: "#"
     }
   ];
+
+  export const navItems = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Gear', href: '/gear' },
+    { name: 'Contact', href: '/contact' },
+  ];
