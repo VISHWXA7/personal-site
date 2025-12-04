@@ -1,18 +1,19 @@
 import React from 'react';
-import { projects, timeline, hobbies } from '@/app/data/index';
+import Carousel from '@/components/Carousel';
+import {timeline, hobbies, DEFAULT_ITEMS, PROJECT_TWO } from '@/app/data/index';
 
 export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-black text-white px-8 py-16">
-      <div className="max-w-xl mx-auto">
+      <div className="max-w-xl mx-auto ">
       <h2 className="text-3xl font-bold mb-2 mt-10">About</h2>
       <p className="text-gray-400 text-xl mb-12">Who I am.</p>
 
         {/* Timeline Section */}
         <section className="mb-24 mt-10">
           <h2 className="text-3xl font-bold mb-12">Timeline</h2>
-          <div className="relative border-l-2 border-gray-800 pl-8 space-y-12">
+          <div className="relative border-l-2 border-gray-800 pl-8 space-y-12 mb-12">
             {timeline.map((item, i) => (
               <div key={i} className="relative">
 
@@ -26,34 +27,36 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
+          <div className='border-b border-gray-800 pt-10'></div>
         </section>
 
         {/* Projects Section */}
         <section className="mb-24">
+
           <h2 className="text-3xl font-bold mb-12">Projects</h2>
-          
-          <div className="space-y-8">
-            {projects.map((project, i) => (
-              <div key={i} className="border-b border-gray-800 pb-8">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-                    <p className="text-gray-400 text-justify">{project.description}</p>
-                  </div>
-                  <div className="flex flex-wrap gap-2 justify-end ml-8">
-                    {project.tags.map((tag, j) => (
-                      <span
-                        key={j}
-                        className={`${tag.color} px-4 py-1 rounded-full text-sm font-medium`}
-                      >
-                        {tag.name}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className='justify-center flex border-b border-gray-800'>
+            <div style={{ height: '600px', position: 'relative'}}>
+              <Carousel 
+                items={DEFAULT_ITEMS}
+                baseWidth={350}
+                autoplay={true}
+                autoplayDelay={4000}
+                pauseOnHover={false}
+                loop={true}
+                round={false}
+              />
+              <div className='mb-5'></div>
+              <Carousel 
+                items={PROJECT_TWO}
+                baseWidth={350}
+                autoplay={true}
+                autoplayDelay={2000}
+                pauseOnHover={false}
+                loop={true}
+                round={false}
+              />
           </div>
+          </div>  
         </section>
 
         {/* Hobbies Section */}

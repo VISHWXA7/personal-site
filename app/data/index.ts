@@ -1,29 +1,5 @@
  import React from 'react';
-
- export const projects = [
-    {
-      name: "CampusHub",
-      description: "All-in-one platform for students to share campus or community updates, and buy/sell essentials in a secure student marketplace.",
-      tags: [
-        { name: "TypeScript", color: "bg-blue-500" },
-        { name: "React", color: "bg-cyan-500" },
-        { name: "Next.js", color: "bg-gray-600" },
-        { name: "Node.js", color: "bg-green-500" },
-        { name: "Express.js", color: "bg-yellow-600" },
-        { name: "AWS", color: "bg-orange-500" }
-      ]
-    },
-    {
-      name: "Sole Exchange",
-      description: "Forum that allows users to post, interact, and search about anything sneaker related..",
-      tags: [
-        { name: "React", color: "bg-cyan-500" },
-        { name: "JavaScript", color: "bg-yellow-500" },
-        { name: "Node.js", color: "bg-green-500" },
-        { name: "Supabase", color: "bg-teal-500" }
-      ]
-    },
-  ];
+ import { CarouselItem } from '@/components/Carousel';
 
   export const hobbies = [
     {
@@ -92,3 +68,47 @@
     { name: 'Gear', href: '/gear' },
     { name: 'Contact', href: '/contact' },
   ];
+
+
+
+// PROJECTS DATA
+  export const DEFAULT_ITEMS: CarouselItem[] = [
+  {
+    title: 'Text Animations',
+    description: 'SVKJKBVKJJVDJVSJKDK.',
+    id: 1
+  },
+  {
+    title: 'Animations',
+    description: 'Smooth animations for your projects.',
+    id: 2
+  }
+];
+
+export const PROJECT_TWO: CarouselItem[] = [
+  {
+    title: 'ABSTRACT',
+    description: 'Cool text animations for your projects.',
+    id: 1
+  },
+  {
+    title: 'Animations',
+    description: 'Smooth animations for your projects.',
+    id: 2
+  },
+  {
+    title: 'Components',
+    description: 'Reusable components for your projects.',
+    id: 3
+  },
+  {
+    title: 'Backgrounds',
+    description: 'Beautiful backgrounds and patterns for your projects.',
+    id: 4
+  },
+  {
+    title: 'Common UI',
+    description: 'Common UI components are coming soon!',
+    id: 5
+  }
+];
