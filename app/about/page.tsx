@@ -52,6 +52,7 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
+          <div className="border-b border-gray-800 mt-12"></div>
         </section>
 
         {/* Hobbies Section */}
