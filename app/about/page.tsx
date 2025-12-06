@@ -1,6 +1,5 @@
 import React from 'react';
-import Carousel from '@/components/Carousel';
-import {timeline, hobbies, DEFAULT_ITEMS, PROJECT_TWO } from '@/app/data/index';
+import {timeline, projects, hobbies } from '@/app/data/index';
 
 export default function Portfolio() {
 
@@ -11,52 +10,48 @@ export default function Portfolio() {
       <p className="text-gray-400 text-xl mb-12">Who I am.</p>
 
         {/* Timeline Section */}
-        <section className="mb-24 mt-10">
-          <h2 className="text-3xl font-bold mb-12">Timeline</h2>
-          <div className="relative border-l-2 border-gray-800 pl-8 space-y-12 mb-12">
-            {timeline.map((item, i) => (
-              <div key={i} className="relative">
+        <section className="mt-10 mb-20">
+          <h2 className="text-3xl font-bold mb-10">Timeline</h2>
 
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-xl font-semibold">{item.company}</h3>
-                    <p className="text-gray-400 italic">{item.role}</p>
-                  </div> 
+          <div className="space-y-8">
+            {timeline.map((item, i) => (
+              <div key={i} className="border-l border-gray-700 pl-4">
+                <div className='flex justify-between items-center'>
+                  <h3 className="text-lg font-semibold">{item.company}</h3>
+                    <span className="text-gray-400 text-sm">{item.duration}</span>
                 </div>
-                <p className="text-gray-300">• {item.description}</p>
+                <p className="text-gray-400">{item.role}</p>
+                <p className="text-gray-300 mt-2">{item.description}</p>
               </div>
             ))}
           </div>
-          <div className='border-b border-gray-800 pt-10'></div>
+          <div className="border-b border-gray-800 mt-12"></div>
         </section>
 
         {/* Projects Section */}
         <section className="mb-24">
-
           <h2 className="text-3xl font-bold mb-12">Projects</h2>
-          <div className='justify-center flex border-b border-gray-800'>
-            <div style={{ height: '600px', position: 'relative'}}>
-              <Carousel 
-                items={DEFAULT_ITEMS}
-                baseWidth={350}
-                autoplay={true}
-                autoplayDelay={4000}
-                pauseOnHover={false}
-                loop={true}
-                round={false}
-              />
-              <div className='mb-5'></div>
-              <Carousel 
-                items={PROJECT_TWO}
-                baseWidth={350}
-                autoplay={true}
-                autoplayDelay={2000}
-                pauseOnHover={false}
-                loop={true}
-                round={false}
-              />
+
+          <div className="grid  grid-cols-1 gap-6">
+            {projects.map((project, i) => (
+              <div
+                key={i}
+                className="flex flex-col justify-between border border-gray-700 rounded-lg p-6 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-150"
+              >
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">{project.name}</h3>
+                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                </div>
+
+                <div>
+                  <div className="border-t border-gray-700 my-4"></div>
+                  <p className="text-gray-400 text-sm">
+                    Tech stack: <span className="text-gray-300">{project.tech.join(", ")}</span>
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-          </div>  
         </section>
 
         {/* Hobbies Section */}
