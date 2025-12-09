@@ -38,14 +38,14 @@ const page = () => {
             <div className='mt-10 flex justify-center'>
               <TiltedCard
                   imageSrc="img1.jpg"
-                  altText="Kendrick Lamar - GNX Album Cover"
+                  altText="img1"
                   captionText="Sky Cracker"
                   containerHeight="300px"
                   containerWidth="300px"
                   imageHeight="300px"
                   imageWidth="300px"
                   rotateAmplitude={12}
-                  scaleOnHover={1.2}
+                  scaleOnHover={1}
                   showMobileWarning={false}
                   showTooltip={true}
                   displayOverlayContent={true}
