@@ -74,28 +74,22 @@ export const projects = [
 
 export const gearitems = [
     {
-      name: "MacBook Pro 16\"",
-      description: "Space Black\nM3 Max, 48GB RAM, 1TB SSD",
-      image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=300&fit=crop",
-      link: "#"
+      name: "Lenovo Legion Slim 7i",
+      description: "Core i9, 16GB RAM, 1TB SSD",
+      image: "https://images.unsplash.com/photo-1763162410742-1d0097cea556?q=80&w=3317&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      link: "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-7-series/lenovo-legion-slim-7i-gen-8-(16-inch-intel)/len101g0028?orgRef=https%253A%252F%252Fwww.google.com%252F&srsltid=AfmBOoqin_yAqFF5kytTG3YdU5x5WM3ZKnauG6_g90fbmZPcbB7RROTB"
     },
     {
-      name: "GIGABYTE M27QX",
-      description: "27\" 240Hz Gaming Monitor",
+      name: "SAMSUNG M27QX",
+      description: "24\" 240Hz Monitor",
       image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=300&fit=crop",
-      link: "#"
+      link: "https://amzn.in/d/drppkwZ"
     },
     {
-      name: "Standing Desk",
-      description: "Flexispot EC3/EC4",
-      image: "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=400&h=300&fit=crop",
-      link: "#"
-    },
-    {
-      name: "Steelcase Leap V2",
-      description: "Ergonomic Office Chair",
-      image: "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=400&h=300&fit=crop",
-      link: "#"
+      name: "Samsung S21fe 5G",
+      description: "Snapdragon 888, 8GB RAM",
+      image: "https://images.unsplash.com/photo-1723054072995-af2b91c5cbb6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      link: "https://www.samsung.com/levant/smartphones/galaxy-s21-5g/galaxy-s21-fe-5g/buy/"
     }
 ];
 

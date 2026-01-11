@@ -45,7 +45,7 @@ const GearCard = ({ item }: { item: GearItem }) => (
 export default function GearPage() {
   
   return (
-    <div className=" min-h-screen bg-black text-white p-6 md:p-12">
+    <div className=" min-h-screen bg-black text-white p-6 md:p-12 px-8 py-16">
       <div className="max-w-xl mx-auto">
         
       {/* Gear Section */}

@@ -11,10 +11,10 @@ const page = () => {
 
 
     return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-8">
+    <div className="min-h-screen bg-black text-white p-4 sm:p-8 px-8 py-16">
       <div className="max-w-xl mx-auto">
-        <div className="mt-10">
-          <h1 className="text-3xl sm:text-3xl font-bold mb-2 mt-16">hello, Vishwaa here</h1>
+        <div >
+          <h1 className="text-3xl sm:text-3xl font-bold mb-2 mt-12">hello, Vishwaa here</h1>
           <p className="text-gray-400 text-sm sm:text-base">
             your average enjoyer becoming a software engineer.
           </p>
