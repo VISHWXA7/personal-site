@@ -4,7 +4,7 @@ import {timeline, projects, hobbies } from '@/app/data/index';
 export default function Portfolio() {
 
   return (
-    <div className="min-h-screen bg-black text-white px-8 py-16">
+    <div className="min-h-screen bg-black text-white px-6 py-16">
       <div className="max-w-xl mx-auto ">
       <h2 className="text-3xl font-bold mb-2 mt-10">About</h2>
       <p className="text-gray-400 text-xl mb-12">Who I am.</p>

@@ -26,7 +26,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, subtitle, href }
 export default function ContactPage() {
   
   return (
-    <div className="bg-black text-white p-6 md:p-12 min-h-screen px-8 py-16">
+    <div className="bg-black text-white p-6 md:p-12 min-h-screen py-16">
       <div className="max-w-xl mx-auto">
         {/* Header */}
         <div className="mb-10 mt-10">
